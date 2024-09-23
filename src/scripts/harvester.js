@@ -7,11 +7,17 @@ export const harvestPlants = (fieldArray) => {
 
     for (const plant of fieldArray) {
         let count = 0;
-
-        while (count < plant.output) {
-            finalFieldArray.push({ ...plant});
-            count++;
-        }        
+        if(plant.type === "Corn"){
+            while (count < (plant.output/2)) {
+                finalFieldArray.push({ ...plant});
+                count++;
+            }   
+        } else{
+            while (count < plant.output) {
+                finalFieldArray.push({ ...plant});
+                count++;
+            }
+        }       
     }
     return finalFieldArray
 }
