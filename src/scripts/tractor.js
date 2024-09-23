@@ -3,14 +3,13 @@
 // for each element invoke relevant createVegetable() function in seeds directory and return object 
 // invoke the addPlant(xObject) function to push to fieldArray
 
-import {createAsparagus} from "seeds/asparagus.js"
-import {createCorn} from "seeds/corn.js"
-import {createPotato} from "seeds/potato.js"
-import {createSoybean} from "seeds/soybean.js"
-import {createSunflower} from "seeds/sunflower.js"
-import {createWheat} from "seeds/wheat.js"
-import {addPlant} from "field.js"
-
+import {createAsparagus} from "./seeds/asparagus.js"
+import {createCorn} from "./seeds/corn.js"
+import {createPotato} from "./seeds/potato.js"
+import {createSoybean} from "./seeds/soybean.js"
+import {createSunflower} from "./seeds/sunflower.js"
+import {createWheat} from "./seeds/wheat.js"
+import {addPlant} from "./field.js"
 
 // iterate over the yearlyPlan[] multidimensional array
 // for each element of the sub-arrays call the correct create function, create a plant object, and pass it to the addPlant() function 

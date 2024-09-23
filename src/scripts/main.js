@@ -1,4 +1,4 @@
-// console.log("Welcome to the main module")
+console.log("Welcome to the main module")
 // imports: createPlan(), plantSeeds(), usePlants(), harvestPlants(), createCatalog()
 // variables: yearlyPlan[], fieldArray[], finalFieldArray[]
 
@@ -6,7 +6,7 @@ import {createPlan} from "./plan.js"
 import {plantSeeds} from "./tractor.js"
 import {usePlants} from "./field.js"
 import {harvestPlants} from "./harvester.js"
-import {createCatalog} from "./catalog.js"
+import {Catalog} from "./catalog.js"
 
 // invoke createPlan() from plan.js into the yearlyPlan variable
 const yearlyPlan = createPlan()
@@ -26,5 +26,12 @@ let finalFieldArray = harvestPlants(fieldArray)
 // invoke catalog(finalFieldArray) to pass the final field array to the HTML builder
 // return the final array after passing though catalog() to convert into an HTML string to add to the DOM using innerHTML
 
-const catalogHTML = createCatalog(finalFieldArray)
-catalogHTML.innerHTML = finalFieldArray
+// console.log(Catalog(finalFieldArray));
+
+const catalogHTML = Catalog(finalFieldArray)
+
+let catalogDOM = document.getElementById('plantContainer')
+catalogDOM.innerHTML = catalogHTML
+
+// const cropContainer = document.getElementsByClassName('harvestPlants(fieldArray)')
+// cropContainer.innerHTML = finalFieldArray
